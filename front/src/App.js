@@ -12,8 +12,8 @@ function App() {
   const [customerAddress, setCustomerAddress] = useState(null);
   const [error, setError] = useState(null);
 
-  const contractAddress = '0xcA29799e974DceCc9ec9238a9346eBcF414A2936';
   const contractABI = abi.abi;
+ const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 
   const checkIfWalletIsConnected = async () => {
     try {
